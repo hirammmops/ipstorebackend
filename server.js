@@ -52,3 +52,8 @@ app.post('/guardar-ip', (req, res) => {
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
 });
+app.post("/guardar-compra", (req, res) => {
+  const datos = req.body;
+  console.log("Compra simulada:", datos);
+  res.json({ mensaje: "Compra simulada recibida" });
+});
